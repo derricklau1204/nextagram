@@ -12,6 +12,7 @@ import {useHistory} from 'react-router-dom'
 import AuthModal from "./AuthModal"
 import {toast} from 'react-toastify';
 
+
 const NavBarDisplay = ({loggedIn,setLoggedIn}) => {
   const [isOpen, setIsOpen] = useState(false);
   const history = useHistory()
@@ -38,24 +39,24 @@ const handleLogout =()=>{
 history.push("/")
 }
   return (
-    <div>
-      <Navbar color="dark" dark expand="md">
-        <NavbarBrand style={{cursor:"pointer"}} onClick= {() => {history.push("/")}}>Nextagram</NavbarBrand>
+    <div >
+      <Navbar dark expand="md">
+        <NavbarBrand className="logo" style={{cursor:"pointer",color:"black",fontSize:"2.5rem"}} onClick= {() => {history.push("/")}}>Nextagram</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink style={{cursor:"pointer"}}onClick={()=>{history.push("/")}}>Home</NavLink>
+              <NavLink style={{cursor:"pointer", color:"black"}}onClick={()=>{history.push("/")}}>Home</NavLink>
 
             </NavItem>
             <NavItem>
               {
                 loggedIn?
-              <NavLink style={{cursor:"pointer"}}onClick={()=>{
+              <NavLink style={{cursor:"pointer",color:"black"}}onClick={()=>{
                 handleLogout()
               }}>Log Out</NavLink>
                 :
-                <NavLink style={{cursor:"pointer"}}onClick={toggleModal}>Log In</NavLink>
+                <NavLink style={{cursor:"pointer",color:"black"}}onClick={toggleModal}>Log In</NavLink>
               }
            
 

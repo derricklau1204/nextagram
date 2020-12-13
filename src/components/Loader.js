@@ -1,4 +1,4 @@
-import LoaderImage from '../3.gif'
+import LoaderImage from '../4.gif'
 import React from 'react';
 
 

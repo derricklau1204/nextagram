@@ -23,7 +23,7 @@ const UserImages =({userId}) =>{
     },[userId])
 
     if(isloading){
-        return <Loader width="100px" height="100px" color="blue" /> 
+        return <Loader /> 
       }
 
     return(
@@ -31,7 +31,7 @@ const UserImages =({userId}) =>{
         {userImages.map((eachImg,index) => {          
                 return(
                     <Card>
-                      <CardImg src={eachImg.url} alt="Card image cap" style={{width:"150px"}} />
+                      <CardImg src={eachImg.url} alt="Card image cap" style={{width:"200px",height:"170px", margin:"3px"}} />
                     </Card>
                 )
             })}

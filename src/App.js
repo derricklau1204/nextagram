@@ -40,7 +40,7 @@ function App() {
     <Route exact path="/" render={(props)=> <HomePage{...props} users={users}/>}/>
     <Route path ="/users/:id" component={UserProfilePage}/>
     <Route exact path="/profile" component={MyProfilePage} />
-   <Route exact path="/upload" component={UploadPage}/>
+    <Route exact path="/upload" component={UploadPage}/>
     <ToastContainer />
     </>
   );
